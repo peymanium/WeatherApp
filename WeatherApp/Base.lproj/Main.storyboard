@@ -1,13 +1,14 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6204"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="WeatherApp" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -15,11 +16,68 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1QS-fy-xB4">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="80"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Dubai, United Araba Emirates" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HcJ-pV-B5D">
+                                        <rect key="frame" x="72" y="31" width="457" height="41"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="40" id="CqQ-jf-22o"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="20"/>
+                                        <color key="textColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" red="0.0" green="0.3646498488342429" blue="0.72974648319191915" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstItem="HcJ-pV-B5D" firstAttribute="centerX" secondItem="1QS-fy-xB4" secondAttribute="centerX" id="BSx-c6-CPb"/>
+                                    <constraint firstAttribute="bottom" secondItem="HcJ-pV-B5D" secondAttribute="bottom" constant="8" id="fay-jB-eGS"/>
+                                    <constraint firstAttribute="height" constant="80" id="gzb-n3-5PL"/>
+                                </constraints>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Clear Sky" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aOP-in-GeM">
+                                <rect key="frame" x="150" y="396" width="300" height="45"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="45" id="F60-1K-dmc"/>
+                                    <constraint firstAttribute="width" constant="300" id="xqa-30-gZv"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="20"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="cloudy" translatesAutoresizingMaskIntoConstraints="NO" id="U7J-2v-cE7">
+                                <rect key="frame" x="150" y="88" width="300" height="300"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="300" id="7Dh-Kz-c6p"/>
+                                    <constraint firstAttribute="height" constant="300" id="dmf-uw-KwS"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.97214330808080807" green="0.97214330808080807" blue="0.97214330808080807" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="aOP-in-GeM" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="2C7-lX-ogY"/>
+                            <constraint firstAttribute="trailing" secondItem="1QS-fy-xB4" secondAttribute="trailing" id="P0x-Zz-D07"/>
+                            <constraint firstItem="U7J-2v-cE7" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="PO9-mj-KsT"/>
+                            <constraint firstItem="U7J-2v-cE7" firstAttribute="top" secondItem="1QS-fy-xB4" secondAttribute="bottom" constant="8" id="aqd-ah-m3Y"/>
+                            <constraint firstItem="1QS-fy-xB4" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="eL1-90-b3U"/>
+                            <constraint firstItem="aOP-in-GeM" firstAttribute="top" secondItem="U7J-2v-cE7" secondAttribute="bottom" constant="8" id="tr0-3H-eFJ"/>
+                            <constraint firstItem="1QS-fy-xB4" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="zdW-hD-Lyt"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="IMG_Weather" destination="U7J-2v-cE7" id="M1k-vW-Rob"/>
+                        <outlet property="LBL_City" destination="HcJ-pV-B5D" id="hfu-h7-75x"/>
+                        <outlet property="LBL_Weather" destination="aOP-in-GeM" id="F3b-jr-t0L"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="245" y="303"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="cloudy" width="700" height="605"/>
+    </resources>
 </document>
